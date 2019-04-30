@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Bestelltool.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Warenliste" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Warenliste.wl</Value>
+    </Setting>
+    <Setting Name="Bestellblatt" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Bestellblatt.best</Value>
+    </Setting>
+    <Setting Name="WindowsDomain" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">pdc_msr</Value>
+    </Setting>
+    <Setting Name="Mail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sample@mail.de</Value>
+    </Setting>
+    <Setting Name="MailHash" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sha1:64000:18:hmddpKWswrKhn2HvrvO0yz8G/K2Izqxn:h1FXGjKc7Wd1HtFiNNZegDTh</Value>
+    </Setting>
+    <Setting Name="HostMail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">orders@company.de</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,8 @@
+{
+  "id": "german",
+  "name": "Deutsch",
+  "langId": 1031,
+  "translations": {
+    "ui.bestelltool.form.authentification": "",
+  }
+}
