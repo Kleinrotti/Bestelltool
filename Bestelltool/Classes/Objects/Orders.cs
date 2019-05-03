@@ -102,7 +102,7 @@ namespace Bestelltool.Classes
             const string header = "Hallo,\n\nhiermit bestellen wir folgende Artikel:\n\n";
             foreach (var v in w.Warenkorb)
             {
-                body += v.Ammount + "x " + v.Name + "\nKostenstelle: " + v.Costcentre + "\nAnmerkung: " + 
+                body += v.Ammount + "x " + v.Name + "\nKostenstelle: " + v.Costcentre + "\nAnmerkung: " +
                     v.Annotation + "\n--------------------------------------------\n\n";
             }
 

@@ -44,8 +44,6 @@ namespace Bestelltool
             label_user.Text = DomainAuthentification.FullUsername;
             listView_warenkorb.FullRowSelect = true;
             _login = c;
-            var k = new Configuration();
-            k.SetStandartPaths();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

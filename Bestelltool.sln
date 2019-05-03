@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bestelltool", "Bestelltool\Bestelltool.csproj", "{456BBECB-E9C3-4927-AE22-78441B3141A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bestelltool.Language", "Bestelltool.Language\Bestelltool.Language.csproj", "{293D3646-2340-4362-80CD-F1450432755B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bestelltool.Language", "Bestelltool.Language\Bestelltool.Language.csproj", "{D5AEFEFE-63D9-4997-99A3-D0EA3DFD5C36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{456BBECB-E9C3-4927-AE22-78441B3141A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{456BBECB-E9C3-4927-AE22-78441B3141A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{456BBECB-E9C3-4927-AE22-78441B3141A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{293D3646-2340-4362-80CD-F1450432755B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{293D3646-2340-4362-80CD-F1450432755B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{293D3646-2340-4362-80CD-F1450432755B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{293D3646-2340-4362-80CD-F1450432755B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5AEFEFE-63D9-4997-99A3-D0EA3DFD5C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5AEFEFE-63D9-4997-99A3-D0EA3DFD5C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5AEFEFE-63D9-4997-99A3-D0EA3DFD5C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5AEFEFE-63D9-4997-99A3-D0EA3DFD5C36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

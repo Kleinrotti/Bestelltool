@@ -60,7 +60,7 @@ namespace Bestelltool
         {
             if (textBox_costcentre.Text == string.Empty)
             {
-                label_kostenstelle.ForeColor = System.Drawing.Color.Red;
+                label_costcentre.ForeColor = System.Drawing.Color.Red;
                 return;
             }
             P.Annotation = richTextBox_notice.Text;
@@ -91,7 +91,7 @@ namespace Bestelltool
 
         private void textBox_costcentre_TextChanged(object sender, EventArgs e)
         {
-            label_kostenstelle.ForeColor = System.Drawing.Color.Black;
+            label_costcentre.ForeColor = System.Drawing.Color.Black;
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.textBox_username = new System.Windows.Forms.TextBox();
             this.textBox_password = new System.Windows.Forms.TextBox();
-            this.label_titel = new System.Windows.Forms.Label();
+            this.label_title = new System.Windows.Forms.Label();
             this.label_username = new System.Windows.Forms.Label();
             this.label_password = new System.Windows.Forms.Label();
             this.button_enter = new System.Windows.Forms.Button();
@@ -61,17 +61,17 @@
             this.textBox_password.Size = new System.Drawing.Size(201, 26);
             this.textBox_password.TabIndex = 1;
             // 
-            // label_titel
+            // label_title
             // 
-            this.label_titel.AutoSize = true;
-            this.label_titel.BackColor = System.Drawing.Color.Transparent;
-            this.label_titel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_titel.Location = new System.Drawing.Point(323, 208);
-            this.label_titel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_titel.Name = "label_titel";
-            this.label_titel.Size = new System.Drawing.Size(146, 33);
-            this.label_titel.TabIndex = 2;
-            this.label_titel.Text = "Anmelden";
+            this.label_title.AutoSize = true;
+            this.label_title.BackColor = System.Drawing.Color.Transparent;
+            this.label_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_title.Location = new System.Drawing.Point(323, 208);
+            this.label_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_title.Name = "label_title";
+            this.label_title.Size = new System.Drawing.Size(146, 33);
+            this.label_title.TabIndex = 2;
+            this.label_title.Text = "Anmelden";
             // 
             // label_username
             // 
@@ -196,7 +196,7 @@
             this.Controls.Add(this.button_enter);
             this.Controls.Add(this.label_password);
             this.Controls.Add(this.label_username);
-            this.Controls.Add(this.label_titel);
+            this.Controls.Add(this.label_title);
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.textBox_username);
             this.DoubleBuffered = true;
@@ -222,7 +222,7 @@
 
         private System.Windows.Forms.TextBox textBox_username;
         private System.Windows.Forms.TextBox textBox_password;
-        private System.Windows.Forms.Label label_titel;
+        private System.Windows.Forms.Label label_title;
         private System.Windows.Forms.Label label_username;
         private System.Windows.Forms.Label label_password;
         private System.Windows.Forms.Button button_enter;

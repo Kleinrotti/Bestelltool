@@ -17,6 +17,8 @@ namespace Bestelltool
 
         private void InsertMailPassword_Load(object sender, EventArgs e)
         {
+            label_password.Text = Language.Language.GetText("control_insertmailpassword_label_password");
+            button_ok.Text = Language.Language.GetText("control_insertmailpassword_button_ok");
         }
 
         private void button_ok_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace Bestelltool
             }
             else
             {
-                MessageBox.Show(@"Falsches Passwort");
+                MessageBox.Show(Language.Language.GetText("message_insertmailpassword_wrongpassword"));
             }
         }
 

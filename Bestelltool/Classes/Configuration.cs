@@ -1,5 +1,6 @@
 ﻿using Bestelltool.Classes;
 using Bestelltool.Enums;
+using Bestelltool.Language;
 using Bestelltool.Properties;
 using Microsoft.Win32;
 using System;
@@ -12,6 +13,9 @@ namespace Bestelltool
         public static string BestellblattPfad { get; private set; } = Settings.Default.Bestellblatt;
 
         public static string WarenlistenPfad { get; private set; } = Settings.Default.Warenliste;
+
+        private static LangID _defaultLanguage { get; set; } = LangID.German;
+
         private RegistryKey _registryKey;
 
         public void ChangePath(OpenFileDialog o, ConfigType configtype)
@@ -35,6 +39,24 @@ namespace Bestelltool
             }
         }
 
+        public void ChangeLanguage(LangID language)
+        {
+            _registryKey = Registry.CurrentUser.OpenSubKey("Software", true);
+            _registryKey = _registryKey.OpenSubKey("Bestellsoftware", true);
+            _registryKey.SetValue("Language", language, RegistryValueKind.DWord);
+
+            _registryKey.Close();
+        }
+
+        public LangID GetLanguage()
+        {
+            _registryKey = Registry.CurrentUser.OpenSubKey("Software", true);
+            _registryKey = _registryKey.OpenSubKey("Bestellsoftware", true);
+            var id = (LangID)_registryKey.GetValue("Language");
+            _registryKey.Close();
+            return id;
+        }
+
         /// <summary>
         /// Set default filepaths in registry
         /// </summary>
@@ -45,11 +67,17 @@ namespace Bestelltool
             _registryKey.CreateSubKey("Bestellsoftware");
             _registryKey = _registryKey.OpenSubKey("Bestellsoftware", true);
 
-            if (_registryKey.GetValue("Bestellblattpfad") == null ||
-                    _registryKey.GetValue("Warenlistenpfad") == null)
+            if (_registryKey.GetValue("Bestellblattpfad") == null)
             {
                 _registryKey.SetValue("Bestellblattpfad", BestellblattPfad);
+            }
+            if (_registryKey.GetValue("Warenlistenpfad") == null)
+            {
                 _registryKey.SetValue("Warenlistenpfad", WarenlistenPfad);
+            }
+            if (_registryKey.GetValue("Language") == null)
+            {
+                _registryKey.SetValue("Language", _defaultLanguage, RegistryValueKind.DWord);
             }
             BestellblattPfad = _registryKey.GetValue("Bestellblattpfad").ToString();
             WarenlistenPfad = _registryKey.GetValue("Warenlistenpfad").ToString();

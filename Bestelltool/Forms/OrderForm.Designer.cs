@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.richTextBox_notice = new System.Windows.Forms.RichTextBox();
-            this.label_anmerkung = new System.Windows.Forms.Label();
+            this.label_annotation = new System.Windows.Forms.Label();
             this.button_add = new System.Windows.Forms.Button();
             this.trackBar_ammount = new System.Windows.Forms.TrackBar();
             this.label_ammount = new System.Windows.Forms.Label();
             this.label_number = new System.Windows.Forms.Label();
             this.textBox_costcentre = new System.Windows.Forms.TextBox();
-            this.label_kostenstelle = new System.Windows.Forms.Label();
+            this.label_costcentre = new System.Windows.Forms.Label();
             this.panel_top = new System.Windows.Forms.Panel();
             this.button_exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_ammount)).BeginInit();
@@ -53,17 +53,17 @@
             this.richTextBox_notice.TabIndex = 13;
             this.richTextBox_notice.Text = "";
             // 
-            // label_anmerkung
+            // label_annotation
             // 
-            this.label_anmerkung.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label_annotation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_anmerkung.AutoSize = true;
-            this.label_anmerkung.Location = new System.Drawing.Point(15, 211);
-            this.label_anmerkung.Name = "label_anmerkung";
-            this.label_anmerkung.Size = new System.Drawing.Size(91, 20);
-            this.label_anmerkung.TabIndex = 14;
-            this.label_anmerkung.Text = "Anmerkung";
+            this.label_annotation.AutoSize = true;
+            this.label_annotation.Location = new System.Drawing.Point(15, 211);
+            this.label_annotation.Name = "label_annotation";
+            this.label_annotation.Size = new System.Drawing.Size(91, 20);
+            this.label_annotation.TabIndex = 14;
+            this.label_annotation.Text = "Anmerkung";
             // 
             // button_add
             // 
@@ -125,15 +125,15 @@
             this.textBox_costcentre.TabIndex = 19;
             this.textBox_costcentre.TextChanged += new System.EventHandler(this.textBox_costcentre_TextChanged);
             // 
-            // label_kostenstelle
+            // label_costcentre
             // 
-            this.label_kostenstelle.AutoSize = true;
-            this.label_kostenstelle.Location = new System.Drawing.Point(314, 77);
-            this.label_kostenstelle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_kostenstelle.Name = "label_kostenstelle";
-            this.label_kostenstelle.Size = new System.Drawing.Size(96, 20);
-            this.label_kostenstelle.TabIndex = 20;
-            this.label_kostenstelle.Text = "Kostenstelle";
+            this.label_costcentre.AutoSize = true;
+            this.label_costcentre.Location = new System.Drawing.Point(314, 77);
+            this.label_costcentre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_costcentre.Name = "label_costcentre";
+            this.label_costcentre.Size = new System.Drawing.Size(96, 20);
+            this.label_costcentre.TabIndex = 20;
+            this.label_costcentre.Text = "Kostenstelle";
             // 
             // panel_top
             // 
@@ -168,14 +168,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(466, 545);
             this.Controls.Add(this.panel_top);
-            this.Controls.Add(this.label_kostenstelle);
+            this.Controls.Add(this.label_costcentre);
             this.Controls.Add(this.textBox_costcentre);
             this.Controls.Add(this.label_number);
             this.Controls.Add(this.label_ammount);
             this.Controls.Add(this.trackBar_ammount);
             this.Controls.Add(this.button_add);
             this.Controls.Add(this.richTextBox_notice);
-            this.Controls.Add(this.label_anmerkung);
+            this.Controls.Add(this.label_annotation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
@@ -195,13 +195,13 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox richTextBox_notice;
-        private System.Windows.Forms.Label label_anmerkung;
+        private System.Windows.Forms.Label label_annotation;
         private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.TrackBar trackBar_ammount;
         private System.Windows.Forms.Label label_ammount;
         private System.Windows.Forms.Label label_number;
         private System.Windows.Forms.TextBox textBox_costcentre;
-        private System.Windows.Forms.Label label_kostenstelle;
+        private System.Windows.Forms.Label label_costcentre;
         private System.Windows.Forms.Panel panel_top;
         private System.Windows.Forms.Button button_exit;
     }

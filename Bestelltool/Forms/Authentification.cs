@@ -32,7 +32,7 @@ namespace Bestelltool
             textBox_username.Visible = false;
             label_password.Visible = false;
             label_username.Visible = false;
-            label_titel.Visible = false;
+            label_title.Visible = false;
 
             button_enter.Visible = false;
             pictureBox_loading.Location = new System.Drawing.Point(163, 161);
@@ -47,7 +47,7 @@ namespace Bestelltool
             textBox_username.Visible = true;
             label_password.Visible = true;
             label_username.Visible = true;
-            label_titel.Visible = true;
+            label_title.Visible = true;
             label_loading.Visible = false;
             button_enter.Visible = true;
         }
@@ -81,12 +81,25 @@ namespace Bestelltool
             else
             {
                 InputScreen();
-                MessageBox.Show(@"Falsche Benutzerdaten");
+                MessageBox.Show(Language.Language.GetText("message_authentification_wrongcredentials"));
             }
         }
 
         private void Authentification_Load(object sender, EventArgs e)
         {
+            Configuration c = new Configuration();
+            c.SetStandartPaths();
+            Language.Language.Initialize(c.GetLanguage());
+            LoadTranslation();
+        }
+
+        private void LoadTranslation()
+        {
+            label_loading.Text = Language.Language.GetText("control_authentification_label_loading");
+            label_password.Text = Language.Language.GetText("control_authentification_label_password");
+            label_username.Text = Language.Language.GetText("control_authentification_label_username");
+            label_title.Text = Language.Language.GetText("control_authentification_label_title");
+            button_enter.Text = Language.Language.GetText("control_authentification_button_enter");
         }
 
         private void Authentification_KeyDown(object sender, KeyEventArgs e)

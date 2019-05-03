@@ -1,10 +1,47 @@
 {
-  "exclude": [
-    "**/bin",
-    "**/bower_components",
-    "**/jspm_packages",
-    "**/node_modules",
-    "**/obj",
-    "**/platforms"
-  ]
+  "id": "english",
+  "name": "Englisch",
+  "langId": 1033,
+  "translations": {
+    "control_authentification_button_enter": "Login",
+    "control_authentification_label_title": "Login",
+    "control_authentification_label_username": "Username",
+    "control_authentification_label_password": "Password",
+    "control_authentification_label_loading": "Loading...",
+    "message_authentification_wrongcredentials": "Wrong credentials",
+    "message_authentification_nomailpassword": "No mail password has been found. Please enter",
+    "error_authentification_groupnotexists": "Group doesn't exist",
+    "error_authentification_usernotingroup": "User is not in the EDV-Group",
+
+    "control_insertmailpassword_label_password": "Mail Password",
+    "control_insertmailpassword_button_ok": "OK",
+    "message_insertmailpassword_wrongpassword": "Wrong password",
+
+    "control_completedorders_button_update": "Update",
+    "control_completedorders_button_search": "Search",
+    "control_completedorders_dt_column_id": "ID",
+    "control_completedorders_dt_column_product": "Product",
+    "control_completedorders_dt_column_customer": "Customer",
+    "control_completedorders_dt_column_costcentre": "Costcentre",
+    "control_completedorders_dt_column_amount": "Amount",
+    "control_completedorders_dt_column_date": "Date",
+    "message_completedorders_search": "Search",
+
+    "control_orderform_label_ammount": "Amount",
+    "control_orderform_label_costcentre": "Costcentre",
+    "control_orderform_label_annotation": "Annotation",
+    "control_orderform_button_add": "Add to cart",
+
+    "control_form1_label_welcome": "Welcome",
+    "control_form1_dateiToolStripMenuItem": "File",
+    "control_form1_beendenToolStripMenuItem": "Exit",
+    "control_form1_extrastoolStripMenuItem": "Extras",
+    "control_form1_warenlistenpfadÄndernToolStripMenuItem": "Change Warenlistenpfad",
+    "control_form1_bestelllistenpfadÄndernToolStripMenuItem": "Change Bestellblattpfad",
+    "control_form1_infoStripMenuItem": "Info",
+    "control_form1_button_ordersite": "Order",
+    "control_form1_button_history": "History",
+    "control_form1_groupBox_left": "Products",
+    "control_form1_groupBox_right": "Cart",
+  }
 }

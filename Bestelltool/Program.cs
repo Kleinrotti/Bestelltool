@@ -1,5 +1,4 @@
-﻿using Bestelltool.Classes;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Bestelltool
@@ -15,7 +14,7 @@ namespace Bestelltool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UI(new Credentials()));
+            Application.Run(new Authentification());
         }
     }
 }
