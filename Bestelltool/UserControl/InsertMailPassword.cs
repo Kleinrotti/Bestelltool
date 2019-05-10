@@ -1,5 +1,6 @@
 ﻿using Bestelltool.Classes;
 using Bestelltool.Properties;
+using Sodium;
 using System;
 using System.Windows.Forms;
 
@@ -27,7 +28,7 @@ namespace Bestelltool
             {
                 return;
             }
-            if (PasswordStorage.VerifyPassword(textBox_password.Text, Settings.Default.MailHash))
+            if (PasswordHash.ArgonHashStringVerify(Settings.Default.MailHash, textBox_password.Text))
             {
                 Configuration k = new Configuration();
                 k.WritePasswortRegistry(textBox_password.Text, SecureStringHandler.SecureStringToString(_c.Password));

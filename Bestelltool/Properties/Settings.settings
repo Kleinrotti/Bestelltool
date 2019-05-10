@@ -15,7 +15,7 @@
       <Value Profile="(Default)">sample@mail.de</Value>
     </Setting>
     <Setting Name="MailHash" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">sha1:64000:18:hmddpKWswrKhn2HvrvO0yz8G/K2Izqxn:h1FXGjKc7Wd1HtFiNNZegDTh</Value>
+      <Value Profile="(Default)">$argon2i$v=19$m=131072,t=6,p=1$QpQhm8UjAzXPhUUw9Vc8FQ$9959sLEpMQ9OFvDKEHI2EN5CKrwSrYC38w6meh18Bdw???????????????????????????????</Value>
     </Setting>
     <Setting Name="HostMail" Type="System.String" Scope="Application">
       <Value Profile="(Default)">orders@company.de</Value>

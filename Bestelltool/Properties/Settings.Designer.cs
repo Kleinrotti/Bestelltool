@@ -61,7 +61,8 @@ namespace Bestelltool.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("sha1:64000:18:hmddpKWswrKhn2HvrvO0yz8G/K2Izqxn:h1FXGjKc7Wd1HtFiNNZegDTh")]
+        [global::System.Configuration.DefaultSettingValueAttribute("$argon2i$v=19$m=131072,t=6,p=1$QpQhm8UjAzXPhUUw9Vc8FQ$9959sLEpMQ9OFvDKEHI2EN5CKrw" +
+            "SrYC38w6meh18Bdw???????????????????????????????")]
         public string MailHash {
             get {
                 return ((string)(this["MailHash"]));
