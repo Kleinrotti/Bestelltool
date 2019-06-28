@@ -13,7 +13,7 @@
     "error_authentification_groupnotexists": "Group doesn't exist",
     "error_authentification_usernotingroup": "User is not in the EDV-Group",
 
-    "control_insertmailpassword_label_password": "Mail Password",
+    "control_insertmailpassword_label_password": "Please insert the password of the mailadress",
     "control_insertmailpassword_button_ok": "OK",
     "message_insertmailpassword_wrongpassword": "Wrong password",
 
@@ -36,8 +36,9 @@
     "control_form1_dateiToolStripMenuItem": "File",
     "control_form1_beendenToolStripMenuItem": "Exit",
     "control_form1_extrastoolStripMenuItem": "Extras",
-    "control_form1_warenlistenpfadändernToolStripMenuItem": "Change Warenlisten path",
-    "control_form1_bestelllistenpfadändernToolStripMenuItem": "Change Bestellblatt path",
+    "control_form1_languageToolStripMenuItem": "Language",
+    "control_form1_warenlistenpfadaendernToolStripMenuItem": "Change Warenlisten path",
+    "control_form1_bestelllistenpfadaendernToolStripMenuItem": "Change Bestellblatt path",
     "control_form1_infoStripMenuItem": "Info",
     "control_form1_button_ordersite": "Order",
     "control_form1_button_history": "History",
@@ -47,9 +48,17 @@
     "control_form1_label_lastorder": "Last order:",
     "control_form1_label_target": "Receiver",
     "control_form1_radioButton_defaultmail": "Default mail",
+    "control_form1_label_mailadresse": "Mail: Insert below",
+    "control_form1_inputbox_productname": "Productname",
+    "control_form1_label_productammount": "List isn't up to date anymore",
     "control_form1_button_order": "Send",
+    "control_form1_languagechanged_message": "An application restart is required for some translations",
 
     "control_about_form": "About",
     "control_about_labelVersion": "Version",
+
+    "general_no_valid_input": "Input is not valid",
+    "general_search": "Search",
+    "general_searching": "Searching"
   }
 }

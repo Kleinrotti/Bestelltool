@@ -46,12 +46,12 @@
             // label_password
             // 
             this.label_password.AutoSize = true;
-            this.label_password.Location = new System.Drawing.Point(224, 142);
+            this.label_password.Location = new System.Drawing.Point(151, 145);
             this.label_password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(72, 13);
+            this.label_password.Size = new System.Drawing.Size(218, 13);
             this.label_password.TabIndex = 1;
-            this.label_password.Text = "Mail Passwort";
+            this.label_password.Text = "Bitte das Passwort der Mailadresse eintragen";
             // 
             // button_ok
             // 

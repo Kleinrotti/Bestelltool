@@ -65,8 +65,8 @@ namespace Bestelltool
             dateiToolStripMenuItem.Text = Lang.GetText("control_form1_dateiToolStripMenuItem");
             beendenToolStripMenuItem.Text = Lang.GetText("control_form1_beendenToolStripMenuItem");
             extrastoolStripMenuItem.Text = Lang.GetText("control_form1_extrastoolStripMenuItem");
-            warenlistenpfadÄndernToolStripMenuItem.Text = Lang.GetText("control_form1_warenlistenpfadÄndernToolStripMenuItem");
-            bestelllistenpfadÄndernToolStripMenuItem.Text = Lang.GetText("control_form1_bestelllistenpfadÄndernToolStripMenuItem");
+            warenlistenpfadÄndernToolStripMenuItem.Text = Lang.GetText("control_form1_warenlistenpfadaendernToolStripMenuItem");
+            bestelllistenpfadÄndernToolStripMenuItem.Text = Lang.GetText("control_form1_bestelllistenpfadaendernToolStripMenuItem");
             infoStripMenuItem.Text = Lang.GetText("control_form1_infoStripMenuItem");
             button_ordersite.Text = Lang.GetText("control_form1_button_ordersite");
             button_history.Text = Lang.GetText("control_form1_button_history");
@@ -77,6 +77,7 @@ namespace Bestelltool
             label_target.Text = Lang.GetText("control_form1_label_target");
             radioButton_defaultmail.Text = Lang.GetText("control_form1_radioButton_defaultmail");
             button_order.Text = Lang.GetText("control_form1_button_order");
+            languageToolStripMenuItem.Text = Lang.GetText("control_form1_languageToolStripMenuItem");
         }
 
         private void UI_Load(object sender, EventArgs e)
@@ -117,7 +118,7 @@ namespace Bestelltool
         {
             LoadProducts();
 
-            label_searchfor.Text = @"Keine Suche";
+            label_searchfor.Text = Lang.GetText("control_form1_label_searchfor");
         }
 
         private async void button_order_Click(object sender, EventArgs e)
@@ -208,10 +209,10 @@ namespace Bestelltool
 
         private void button_search_Click(object sender, EventArgs e)
         {
-            var search = Interaction.InputBox("Suchen");
+            var search = Interaction.InputBox(Lang.GetText("general_search"));
             if (search != Empty)
             {
-                label_searchfor.Text = @"Suche: " + search;
+                label_searchfor.Text = Lang.GetText("general_searching") + ": " + search;
                 listView_items.Items.Clear();
                 foreach (var v in _wl.FileContent)
                 {
@@ -240,7 +241,7 @@ namespace Bestelltool
             }
             catch (FormatException)
             {
-                MessageBox.Show(@"Ungültige Eingabe");
+                MessageBox.Show(Lang.GetText("general_no_valid_input"));
             }
         }
 
@@ -287,7 +288,7 @@ namespace Bestelltool
 
         private void toolStripMenuItem_add_Click(object sender, EventArgs e)
         {
-            var add = Interaction.InputBox("Produktname");
+            var add = Interaction.InputBox(Lang.GetText("control_form1_inputbox_productname"));
 
             if (add != Empty && add.Length > 0)
             {
@@ -416,7 +417,7 @@ namespace Bestelltool
         {
             if ((_lastproductupdate - DateTime.Now).Seconds < -1)
             {
-                label_productammount.Text = "Liste nicht mehr aktuell";
+                label_productammount.Text = Lang.GetText("control_form1_label_productammount");
                 label_productammount.ForeColor = Color.Red;
                 label_productammount.Location = new Point(265, 563);
             }
@@ -455,7 +456,7 @@ namespace Bestelltool
             else if (radioButton_custommail.Checked)
             {
                 textBox_othermail.Enabled = true;
-                label_mailadresse.Text = "Mail: Unten eintragen";
+                label_mailadresse.Text = Lang.GetText("control_form1_label_mailadresse");
             }
         }
 
@@ -470,6 +471,7 @@ namespace Bestelltool
             _lang.ChangeLanguage(LangID.German);
             germanToolStripMenuItem.Checked = true;
             englishToolStripMenuItem.Checked = false;
+            MessageBox.Show(Lang.GetText("control_form1_languagechanged_message"));
         }
 
         private void EnglishToolStripMenuItem_Click(object sender, EventArgs e)
@@ -477,6 +479,7 @@ namespace Bestelltool
             _lang.ChangeLanguage(LangID.English);
             englishToolStripMenuItem.Checked = true;
             germanToolStripMenuItem.Checked = false;
+            MessageBox.Show(Lang.GetText("control_form1_languagechanged_message"));
         }
     }
 
