@@ -1,8 +1,11 @@
 ﻿using Bestelltool.Classes;
+using Bestelltool.Language;
 using Bestelltool.Structs;
 using Microsoft.VisualBasic;
+using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,12 +23,14 @@ namespace Bestelltool
             button_update.Visible = true;
             _dt = new DataTable();
             this._dt.Clear();
-            this._dt.Columns.Add("ID", typeof(int));
-            this._dt.Columns.Add("Produkt");
-            this._dt.Columns.Add("Besteller");
-            this._dt.Columns.Add("Kostenstelle");
-            this._dt.Columns.Add("Menge", typeof(int));
-            this._dt.Columns.Add("Datum", typeof(DateTime));
+            this._dt.Columns.Add(Lang.GetText("control_completedorders_dt_column_id"), typeof(int));
+            this._dt.Columns.Add(Lang.GetText("control_completedorders_dt_column_product"));
+            this._dt.Columns.Add(Lang.GetText("control_completedorders_dt_column_customer"));
+            this._dt.Columns.Add(Lang.GetText("control_completedorders_dt_column_costcentre"));
+            this._dt.Columns.Add(Lang.GetText("control_completedorders_dt_column_amount"), typeof(int));
+            this._dt.Columns.Add(Lang.GetText("control_completedorders_dt_column_date"), typeof(DateTime));
+            button_search.Text = Lang.GetText("control_completedorders_button_search");
+            button_update.Text = Lang.GetText("control_completedorders_dt_column_button_update");
             this.dataGridView1.DataSource = this._dt;
             dataGridView1.Columns[0].Width = 50;
             dataGridView1.Columns[1].Width = 380;
@@ -64,22 +69,22 @@ namespace Bestelltool
             UpdateList();
         }
 
-        private void AddToDataTable(Structs.Order b)          //Ein Item in eine neue DataTable Zeile einfügen
+        private void AddToDataTable(Order b)          //Ein Item in eine neue DataTable Zeile einfügen
         {
             DataRow row = _dt.NewRow();
-            row["ID"] = b.Number;
-            row["Produkt"] = b.Product;
-            row["Besteller"] = b.Buyer;
-            row["Kostenstelle"] = b.Costcentre;
-            row["Menge"] = b.Ammount;
-            row["Datum"] = b.Date;
+            row[Lang.GetText("control_completedorders_dt_column_id")] = b.Number;
+            row[Lang.GetText("control_completedorders_dt_column_product")] = b.Product;
+            row[Lang.GetText("control_completedorders_dt_column_customer")] = b.Buyer;
+            row[Lang.GetText("control_completedorders_dt_column_costcentre")] = b.Costcentre;
+            row[Lang.GetText("control_completedorders_dt_column_amount")] = b.Ammount;
+            row[Lang.GetText("control_completedorders_dt_column_date")] = b.Date;
             _dt.Rows.Add(row);
             progressBar_loaded.PerformStep();
         }
 
         private void button_search_Click(object sender, EventArgs e)
         {
-            var search = Interaction.InputBox("Suchen");
+            var search = Interaction.InputBox(Lang.GetText("control_completedorders_search"));
             if (search != string.Empty && search.Length > 0)
             {
                 _dt.Clear();

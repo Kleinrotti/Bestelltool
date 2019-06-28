@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bestelltool.Language;
+using System;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -9,9 +10,9 @@ namespace Bestelltool
         public About()
         {
             InitializeComponent();
-            this.Text = String.Format("Info über {0}", AssemblyTitle);
+            this.Text = String.Format(Lang.GetText("control_about_form") + " {0}", AssemblyTitle);
             this.labelProductName.Text = AssemblyProduct;
-            this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
+            this.labelVersion.Text = String.Format(Lang.GetText("control_about_labelVersion") + " {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;

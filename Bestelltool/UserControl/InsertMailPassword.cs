@@ -1,4 +1,5 @@
 ﻿using Bestelltool.Classes;
+using Bestelltool.Language;
 using Bestelltool.Properties;
 using Sodium;
 using System;
@@ -18,8 +19,8 @@ namespace Bestelltool
 
         private void InsertMailPassword_Load(object sender, EventArgs e)
         {
-            label_password.Text = Language.Language.GetText("control_insertmailpassword_label_password");
-            button_ok.Text = Language.Language.GetText("control_insertmailpassword_button_ok");
+            label_password.Text = Lang.GetText("control_insertmailpassword_label_password");
+            button_ok.Text = Lang.GetText("control_insertmailpassword_button_ok");
         }
 
         private void button_ok_Click(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace Bestelltool
             }
             else
             {
-                MessageBox.Show(Language.Language.GetText("message_insertmailpassword_wrongpassword"));
+                MessageBox.Show(Lang.GetText("message_insertmailpassword_wrongpassword"));
             }
         }
 

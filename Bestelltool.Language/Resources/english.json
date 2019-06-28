@@ -36,12 +36,20 @@
     "control_form1_dateiToolStripMenuItem": "File",
     "control_form1_beendenToolStripMenuItem": "Exit",
     "control_form1_extrastoolStripMenuItem": "Extras",
-    "control_form1_warenlistenpfadÄndernToolStripMenuItem": "Change Warenlistenpfad",
-    "control_form1_bestelllistenpfadÄndernToolStripMenuItem": "Change Bestellblattpfad",
+    "control_form1_warenlistenpfadÃ¤ndernToolStripMenuItem": "Change Warenlisten path",
+    "control_form1_bestelllistenpfadÃ¤ndernToolStripMenuItem": "Change Bestellblatt path",
     "control_form1_infoStripMenuItem": "Info",
     "control_form1_button_ordersite": "Order",
     "control_form1_button_history": "History",
     "control_form1_groupBox_left": "Products",
     "control_form1_groupBox_right": "Cart",
+    "control_form1_label_searchfor": "Nothing searched for",
+    "control_form1_label_lastorder": "Last order:",
+    "control_form1_label_target": "Receiver",
+    "control_form1_radioButton_defaultmail": "Default mail",
+    "control_form1_button_order": "Send",
+
+    "control_about_form": "About",
+    "control_about_labelVersion": "Version",
   }
 }

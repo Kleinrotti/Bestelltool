@@ -1,4 +1,5 @@
 ﻿using Bestelltool.Interfaces;
+using Bestelltool.Language;
 using Bestelltool.Structs;
 using System;
 using System.Windows.Forms;
@@ -49,6 +50,15 @@ namespace Bestelltool
 
         private void Order_Load(object sender, EventArgs e)
         {
+            UpdateLangUI();
+        }
+
+        private void UpdateLangUI()
+        {
+            button_add.Text = Lang.GetText("control_orderform_button_add");
+            label_ammount.Text = Lang.GetText("control_orderform_label_ammount");
+            label_annotation.Text = Lang.GetText("control_orderform_label_annotation");
+            label_costcentre.Text = Lang.GetText("control_orderform_label_costcentre");
         }
 
         private void trackBar_ammount_Scroll(object sender, EventArgs e)
@@ -67,7 +77,7 @@ namespace Bestelltool
             P.Ammount = trackBar_ammount.Value;
             P.Costcentre = textBox_costcentre.Text;
             P.Name = _productname;
-            if (change)                 //Wenn Produkt geändert werden soll wird erst die alte Version gelöscht
+            if (change)
             {
                 _w.Remove(old);
             }

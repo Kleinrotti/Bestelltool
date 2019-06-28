@@ -36,12 +36,20 @@
     "control_form1_dateiToolStripMenuItem": "Datei",
     "control_form1_beendenToolStripMenuItem": "Beenden",
     "control_form1_extrastoolStripMenuItem": "Extras",
-    "control_form1_warenlistenpfadƒndernToolStripMenuItem": "Warenlistenpfad ‰ndern",
-    "control_form1_bestelllistenpfadƒndernToolStripMenuItem": "Bestellblattpfad ‰ndern",
+    "control_form1_warenlistenpfad√§ndernToolStripMenuItem": "Warenlistenpfad √§ndern",
+    "control_form1_bestelllistenpfad√§ndernToolStripMenuItem": "Bestellblattpfad √§ndern",
     "control_form1_infoStripMenuItem": "Info",
     "control_form1_button_ordersite": "Bestellen",
     "control_form1_button_history": "Verlauf",
     "control_form1_groupBox_left": "Produkte",
     "control_form1_groupBox_right": "Warenkorb",
+    "control_form1_label_searchfor": "Keine Suche",
+    "control_form1_label_lastorder": "Letzte Bestellung:",
+    "control_form1_label_target": "Empf√§nger",
+    "control_form1_radioButton_defaultmail": "Standard Auftrag",
+    "control_form1_button_order": "Abschicken",
+
+    "control_about_form": "Info √ºber",
+    "control_about_labelVersion": "Version"
   }
 }

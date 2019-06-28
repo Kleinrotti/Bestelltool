@@ -22,8 +22,7 @@ namespace Bestelltool
         {
             if (o.ShowDialog() != DialogResult.Cancel)
             {
-                _registryKey = Registry.CurrentUser.OpenSubKey("Software", true);
-                _registryKey = _registryKey.OpenSubKey("Bestellsoftware", true);
+                _registryKey = Registry.CurrentUser.OpenSubKey("Software\\Bestellsoftware", true);
                 _registryKey.SetValue(configtype.ToString(), o.FileName);
 
                 _registryKey.Close();
@@ -37,24 +36,6 @@ namespace Bestelltool
             {
                 WarenlistenPfad = o.FileName;
             }
-        }
-
-        public void ChangeLanguage(LangID language)
-        {
-            _registryKey = Registry.CurrentUser.OpenSubKey("Software", true);
-            _registryKey = _registryKey.OpenSubKey("Bestellsoftware", true);
-            _registryKey.SetValue("Language", language, RegistryValueKind.DWord);
-
-            _registryKey.Close();
-        }
-
-        public LangID GetLanguage()
-        {
-            _registryKey = Registry.CurrentUser.OpenSubKey("Software", true);
-            _registryKey = _registryKey.OpenSubKey("Bestellsoftware", true);
-            var id = (LangID)_registryKey.GetValue("Language");
-            _registryKey.Close();
-            return id;
         }
 
         /// <summary>

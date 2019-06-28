@@ -82,6 +82,9 @@
             this.extrastoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warenlistenpfadÄndernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bestelllistenpfadÄndernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.germanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox_right.SuspendLayout();
             this.panel_mail.SuspendLayout();
@@ -103,11 +106,9 @@
             this.groupBox_right.Controls.Add(this.panel_mail);
             this.groupBox_right.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_right.Location = new System.Drawing.Point(807, 104);
-            this.groupBox_right.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox_right.Location = new System.Drawing.Point(538, 69);
             this.groupBox_right.Name = "groupBox_right";
-            this.groupBox_right.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox_right.Size = new System.Drawing.Size(794, 898);
+            this.groupBox_right.Size = new System.Drawing.Size(529, 599);
             this.groupBox_right.TabIndex = 4;
             this.groupBox_right.TabStop = false;
             this.groupBox_right.Text = "Warenkorb";
@@ -120,12 +121,14 @@
             this.columnHeader_name,
             this.columnHeader_kostenstelle,
             this.columnHeader_anmerkung});
+            this.listView_warenkorb.HideSelection = false;
             this.listView_warenkorb.LabelWrap = false;
-            this.listView_warenkorb.Location = new System.Drawing.Point(12, 24);
+            this.listView_warenkorb.Location = new System.Drawing.Point(8, 16);
+            this.listView_warenkorb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView_warenkorb.MultiSelect = false;
             this.listView_warenkorb.Name = "listView_warenkorb";
             this.listView_warenkorb.ShowItemToolTips = true;
-            this.listView_warenkorb.Size = new System.Drawing.Size(774, 589);
+            this.listView_warenkorb.Size = new System.Drawing.Size(517, 394);
             this.listView_warenkorb.TabIndex = 17;
             this.listView_warenkorb.UseCompatibleStateImageBehavior = false;
             this.listView_warenkorb.View = System.Windows.Forms.View.Details;
@@ -161,10 +164,9 @@
             this.panel_mail.Controls.Add(this.radioButton_custommail);
             this.panel_mail.Controls.Add(this.label_mailadresse);
             this.panel_mail.Controls.Add(this.radioButton_defaultmail);
-            this.panel_mail.Location = new System.Drawing.Point(12, 622);
-            this.panel_mail.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_mail.Location = new System.Drawing.Point(8, 415);
             this.panel_mail.Name = "panel_mail";
-            this.panel_mail.Size = new System.Drawing.Size(773, 263);
+            this.panel_mail.Size = new System.Drawing.Size(516, 176);
             this.panel_mail.TabIndex = 12;
             // 
             // panel2
@@ -172,18 +174,20 @@
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.Controls.Add(this.radioButton_location1);
             this.panel2.Controls.Add(this.radioButton_location2);
-            this.panel2.Location = new System.Drawing.Point(-2, 154);
+            this.panel2.Location = new System.Drawing.Point(-1, 103);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(340, 102);
+            this.panel2.Size = new System.Drawing.Size(227, 68);
             this.panel2.TabIndex = 18;
             // 
             // radioButton_location1
             // 
             this.radioButton_location1.AutoSize = true;
             this.radioButton_location1.Checked = true;
-            this.radioButton_location1.Location = new System.Drawing.Point(8, 12);
+            this.radioButton_location1.Location = new System.Drawing.Point(5, 8);
+            this.radioButton_location1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton_location1.Name = "radioButton_location1";
-            this.radioButton_location1.Size = new System.Drawing.Size(118, 26);
+            this.radioButton_location1.Size = new System.Drawing.Size(81, 19);
             this.radioButton_location1.TabIndex = 18;
             this.radioButton_location1.TabStop = true;
             this.radioButton_location1.Text = "Standort 1";
@@ -192,9 +196,10 @@
             // radioButton_location2
             // 
             this.radioButton_location2.AutoSize = true;
-            this.radioButton_location2.Location = new System.Drawing.Point(8, 46);
+            this.radioButton_location2.Location = new System.Drawing.Point(5, 31);
+            this.radioButton_location2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton_location2.Name = "radioButton_location2";
-            this.radioButton_location2.Size = new System.Drawing.Size(118, 26);
+            this.radioButton_location2.Size = new System.Drawing.Size(81, 19);
             this.radioButton_location2.TabIndex = 19;
             this.radioButton_location2.Text = "Standort 2";
             this.radioButton_location2.UseVisualStyleBackColor = true;
@@ -204,9 +209,10 @@
             this.label_target.AutoSize = true;
             this.label_target.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_target.ForeColor = System.Drawing.Color.Black;
-            this.label_target.Location = new System.Drawing.Point(315, 16);
+            this.label_target.Location = new System.Drawing.Point(210, 11);
+            this.label_target.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_target.Name = "label_target";
-            this.label_target.Size = new System.Drawing.Size(154, 32);
+            this.label_target.Size = new System.Drawing.Size(103, 24);
             this.label_target.TabIndex = 17;
             this.label_target.Text = "Empfänger";
             // 
@@ -216,10 +222,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_othermail.Enabled = false;
-            this.textBox_othermail.Location = new System.Drawing.Point(36, 116);
-            this.textBox_othermail.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_othermail.Location = new System.Drawing.Point(24, 77);
             this.textBox_othermail.Name = "textBox_othermail";
-            this.textBox_othermail.Size = new System.Drawing.Size(338, 28);
+            this.textBox_othermail.Size = new System.Drawing.Size(227, 21);
             this.textBox_othermail.TabIndex = 13;
             // 
             // button_order
@@ -229,10 +234,9 @@
             this.button_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_order.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_order.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
-            this.button_order.Location = new System.Drawing.Point(519, 165);
-            this.button_order.Margin = new System.Windows.Forms.Padding(4);
+            this.button_order.Location = new System.Drawing.Point(346, 110);
             this.button_order.Name = "button_order";
-            this.button_order.Size = new System.Drawing.Size(248, 92);
+            this.button_order.Size = new System.Drawing.Size(165, 61);
             this.button_order.TabIndex = 16;
             this.button_order.Text = "Abschicken";
             this.button_order.UseVisualStyleBackColor = false;
@@ -244,10 +248,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton_custommail.AutoSize = true;
-            this.radioButton_custommail.Location = new System.Drawing.Point(6, 118);
-            this.radioButton_custommail.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton_custommail.Location = new System.Drawing.Point(4, 79);
             this.radioButton_custommail.Name = "radioButton_custommail";
-            this.radioButton_custommail.Size = new System.Drawing.Size(21, 20);
+            this.radioButton_custommail.Size = new System.Drawing.Size(14, 13);
             this.radioButton_custommail.TabIndex = 14;
             this.radioButton_custommail.UseVisualStyleBackColor = true;
             this.radioButton_custommail.CheckedChanged += new System.EventHandler(this.radioButton_custommail_CheckedChanged);
@@ -258,9 +261,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label_mailadresse.AutoSize = true;
-            this.label_mailadresse.Location = new System.Drawing.Point(194, 69);
+            this.label_mailadresse.Location = new System.Drawing.Point(129, 46);
+            this.label_mailadresse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_mailadresse.Name = "label_mailadresse";
-            this.label_mailadresse.Size = new System.Drawing.Size(184, 22);
+            this.label_mailadresse.Size = new System.Drawing.Size(131, 15);
             this.label_mailadresse.TabIndex = 13;
             this.label_mailadresse.Text = "Mail: sample@mail.de";
             // 
@@ -268,10 +272,9 @@
             // 
             this.radioButton_defaultmail.AutoSize = true;
             this.radioButton_defaultmail.Checked = true;
-            this.radioButton_defaultmail.Location = new System.Drawing.Point(6, 68);
-            this.radioButton_defaultmail.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton_defaultmail.Location = new System.Drawing.Point(4, 45);
             this.radioButton_defaultmail.Name = "radioButton_defaultmail";
-            this.radioButton_defaultmail.Size = new System.Drawing.Size(171, 26);
+            this.radioButton_defaultmail.Size = new System.Drawing.Size(116, 19);
             this.radioButton_defaultmail.TabIndex = 5;
             this.radioButton_defaultmail.TabStop = true;
             this.radioButton_defaultmail.Text = "Standard Auftrag";
@@ -285,19 +288,19 @@
             this.toolStripMenuItem_change,
             this.toolStripMenuItem_delete});
             this.contextMenuStrip_warenkorb.Name = "contextMenuStrip_warenkorb";
-            this.contextMenuStrip_warenkorb.Size = new System.Drawing.Size(149, 64);
+            this.contextMenuStrip_warenkorb.Size = new System.Drawing.Size(119, 48);
             this.contextMenuStrip_warenkorb.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_warenkorb_ItemClicked);
             // 
             // toolStripMenuItem_change
             // 
             this.toolStripMenuItem_change.Name = "toolStripMenuItem_change";
-            this.toolStripMenuItem_change.Size = new System.Drawing.Size(148, 30);
+            this.toolStripMenuItem_change.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem_change.Text = "Ändern";
             // 
             // toolStripMenuItem_delete
             // 
             this.toolStripMenuItem_delete.Name = "toolStripMenuItem_delete";
-            this.toolStripMenuItem_delete.Size = new System.Drawing.Size(148, 30);
+            this.toolStripMenuItem_delete.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem_delete.Text = "Löschen";
             // 
             // label_user
@@ -308,10 +311,9 @@
             this.label_user.AutoSize = true;
             this.label_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
             this.label_user.ForeColor = System.Drawing.Color.White;
-            this.label_user.Location = new System.Drawing.Point(1250, 18);
-            this.label_user.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_user.Location = new System.Drawing.Point(833, 12);
             this.label_user.Name = "label_user";
-            this.label_user.Size = new System.Drawing.Size(137, 20);
+            this.label_user.Size = new System.Drawing.Size(90, 13);
             this.label_user.TabIndex = 5;
             this.label_user.Text = "Mustermann, Fritz";
             // 
@@ -323,11 +325,9 @@
             this.groupBox_left.Controls.Add(this.button_search);
             this.groupBox_left.Controls.Add(this.button_refresh);
             this.groupBox_left.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_left.Location = new System.Drawing.Point(15, 104);
-            this.groupBox_left.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox_left.Location = new System.Drawing.Point(10, 69);
             this.groupBox_left.Name = "groupBox_left";
-            this.groupBox_left.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox_left.Size = new System.Drawing.Size(729, 898);
+            this.groupBox_left.Size = new System.Drawing.Size(486, 599);
             this.groupBox_left.TabIndex = 19;
             this.groupBox_left.TabStop = false;
             this.groupBox_left.Text = "Produkte";
@@ -335,10 +335,9 @@
             // label_productammount
             // 
             this.label_productammount.AutoSize = true;
-            this.label_productammount.Location = new System.Drawing.Point(560, 844);
-            this.label_productammount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_productammount.Location = new System.Drawing.Point(373, 563);
             this.label_productammount.Name = "label_productammount";
-            this.label_productammount.Size = new System.Drawing.Size(20, 22);
+            this.label_productammount.Size = new System.Drawing.Size(14, 15);
             this.label_productammount.TabIndex = 19;
             this.label_productammount.Text = "0";
             // 
@@ -346,10 +345,9 @@
             // 
             this.label_searchfor.AutoSize = true;
             this.label_searchfor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_searchfor.Location = new System.Drawing.Point(141, 844);
-            this.label_searchfor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_searchfor.Location = new System.Drawing.Point(94, 563);
             this.label_searchfor.Name = "label_searchfor";
-            this.label_searchfor.Size = new System.Drawing.Size(112, 22);
+            this.label_searchfor.Size = new System.Drawing.Size(77, 15);
             this.label_searchfor.TabIndex = 18;
             this.label_searchfor.Text = "Keine Suche";
             // 
@@ -360,11 +358,13 @@
             this.listView_items.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.listView_items.ContextMenuStrip = this.contextMenuStrip_products;
+            this.listView_items.HideSelection = false;
             this.listView_items.LabelWrap = false;
-            this.listView_items.Location = new System.Drawing.Point(8, 27);
+            this.listView_items.Location = new System.Drawing.Point(5, 18);
+            this.listView_items.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView_items.MultiSelect = false;
             this.listView_items.Name = "listView_items";
-            this.listView_items.Size = new System.Drawing.Size(714, 791);
+            this.listView_items.Size = new System.Drawing.Size(477, 528);
             this.listView_items.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView_items.TabIndex = 1;
             this.listView_items.UseCompatibleStateImageBehavior = false;
@@ -385,14 +385,14 @@
             this.toolStripMenuItem_add,
             this.toolStripMenuItem_remove});
             this.contextMenuStrip_products.Name = "contextMenuStrip_products";
-            this.contextMenuStrip_products.Size = new System.Drawing.Size(241, 94);
+            this.contextMenuStrip_products.Size = new System.Drawing.Size(180, 70);
             this.contextMenuStrip_products.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.contextMenuStrip_products_Closed);
             // 
             // toolStripMenuItem_addwarenkorb
             // 
             this.toolStripMenuItem_addwarenkorb.Enabled = false;
             this.toolStripMenuItem_addwarenkorb.Name = "toolStripMenuItem_addwarenkorb";
-            this.toolStripMenuItem_addwarenkorb.Size = new System.Drawing.Size(240, 30);
+            this.toolStripMenuItem_addwarenkorb.Size = new System.Drawing.Size(179, 22);
             this.toolStripMenuItem_addwarenkorb.Text = "In den Warenkorb";
             this.toolStripMenuItem_addwarenkorb.Visible = false;
             this.toolStripMenuItem_addwarenkorb.Click += new System.EventHandler(this.toolStripMenuItem_addwarenkorb_Click);
@@ -400,7 +400,7 @@
             // toolStripMenuItem_add
             // 
             this.toolStripMenuItem_add.Name = "toolStripMenuItem_add";
-            this.toolStripMenuItem_add.Size = new System.Drawing.Size(240, 30);
+            this.toolStripMenuItem_add.Size = new System.Drawing.Size(179, 22);
             this.toolStripMenuItem_add.Text = "Produkt hinzufügen";
             this.toolStripMenuItem_add.Click += new System.EventHandler(this.toolStripMenuItem_add_Click);
             // 
@@ -408,7 +408,7 @@
             // 
             this.toolStripMenuItem_remove.Enabled = false;
             this.toolStripMenuItem_remove.Name = "toolStripMenuItem_remove";
-            this.toolStripMenuItem_remove.Size = new System.Drawing.Size(240, 30);
+            this.toolStripMenuItem_remove.Size = new System.Drawing.Size(179, 22);
             this.toolStripMenuItem_remove.Text = "Produkt entfernen";
             this.toolStripMenuItem_remove.Visible = false;
             this.toolStripMenuItem_remove.Click += new System.EventHandler(this.toolStripMenuItem_remove_Click);
@@ -420,10 +420,9 @@
             this.button_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
-            this.button_search.Location = new System.Drawing.Point(14, 824);
-            this.button_search.Margin = new System.Windows.Forms.Padding(4);
+            this.button_search.Location = new System.Drawing.Point(9, 549);
             this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(118, 62);
+            this.button_search.Size = new System.Drawing.Size(79, 41);
             this.button_search.TabIndex = 17;
             this.button_search.UseVisualStyleBackColor = false;
             this.button_search.Click += new System.EventHandler(this.button_search_Click);
@@ -436,10 +435,9 @@
             this.button_refresh.Cursor = System.Windows.Forms.Cursors.Default;
             this.button_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_refresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
-            this.button_refresh.Location = new System.Drawing.Point(604, 824);
-            this.button_refresh.Margin = new System.Windows.Forms.Padding(4);
+            this.button_refresh.Location = new System.Drawing.Point(403, 549);
             this.button_refresh.Name = "button_refresh";
-            this.button_refresh.Size = new System.Drawing.Size(118, 63);
+            this.button_refresh.Size = new System.Drawing.Size(79, 42);
             this.button_refresh.TabIndex = 11;
             this.button_refresh.UseVisualStyleBackColor = false;
             this.button_refresh.Click += new System.EventHandler(this.button_refresh_Click);
@@ -471,9 +469,10 @@
             this.panel1.Controls.Add(this.button_minimize);
             this.panel1.Controls.Add(this.button_exit);
             this.panel1.Controls.Add(this.label_user);
-            this.panel1.Location = new System.Drawing.Point(0, -2);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1617, 51);
+            this.panel1.Size = new System.Drawing.Size(1078, 34);
             this.panel1.TabIndex = 20;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -485,10 +484,9 @@
             this.label_welcome.AutoSize = true;
             this.label_welcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
             this.label_welcome.ForeColor = System.Drawing.Color.White;
-            this.label_welcome.Location = new System.Drawing.Point(1148, 19);
-            this.label_welcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_welcome.Location = new System.Drawing.Point(765, 13);
             this.label_welcome.Name = "label_welcome";
-            this.label_welcome.Size = new System.Drawing.Size(94, 20);
+            this.label_welcome.Size = new System.Drawing.Size(64, 13);
             this.label_welcome.TabIndex = 22;
             this.label_welcome.Text = "Willkommen";
             // 
@@ -497,8 +495,9 @@
             this.pictureBox_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_logo.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(72, 51);
+            this.pictureBox_logo.Size = new System.Drawing.Size(49, 35);
             this.pictureBox_logo.TabIndex = 21;
             this.pictureBox_logo.TabStop = false;
             // 
@@ -507,9 +506,10 @@
             this.label_headline.AutoSize = true;
             this.label_headline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_headline.ForeColor = System.Drawing.Color.White;
-            this.label_headline.Location = new System.Drawing.Point(712, 10);
+            this.label_headline.Location = new System.Drawing.Point(475, 7);
+            this.label_headline.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_headline.Name = "label_headline";
-            this.label_headline.Size = new System.Drawing.Size(178, 29);
+            this.label_headline.Size = new System.Drawing.Size(118, 20);
             this.label_headline.TabIndex = 20;
             this.label_headline.Text = "Bestellsoftware";
             this.label_headline.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label_headline_MouseDown);
@@ -520,9 +520,10 @@
             this.button_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_minimize.ForeColor = System.Drawing.Color.White;
-            this.button_minimize.Location = new System.Drawing.Point(1431, 0);
+            this.button_minimize.Location = new System.Drawing.Point(954, 0);
+            this.button_minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_minimize.Name = "button_minimize";
-            this.button_minimize.Size = new System.Drawing.Size(90, 46);
+            this.button_minimize.Size = new System.Drawing.Size(60, 31);
             this.button_minimize.TabIndex = 19;
             this.button_minimize.Text = "-";
             this.button_minimize.UseVisualStyleBackColor = true;
@@ -536,9 +537,10 @@
             this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_exit.ForeColor = System.Drawing.Color.White;
-            this.button_exit.Location = new System.Drawing.Point(1527, 0);
+            this.button_exit.Location = new System.Drawing.Point(1018, 0);
+            this.button_exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(90, 46);
+            this.button_exit.Size = new System.Drawing.Size(60, 31);
             this.button_exit.TabIndex = 18;
             this.button_exit.Text = "X";
             this.button_exit.UseVisualStyleBackColor = true;
@@ -551,9 +553,10 @@
             this.button_history.FlatAppearance.BorderSize = 0;
             this.button_history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_history.ForeColor = System.Drawing.Color.White;
-            this.button_history.Location = new System.Drawing.Point(1527, 57);
+            this.button_history.Location = new System.Drawing.Point(1018, 38);
+            this.button_history.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_history.Name = "button_history";
-            this.button_history.Size = new System.Drawing.Size(90, 42);
+            this.button_history.Size = new System.Drawing.Size(60, 28);
             this.button_history.TabIndex = 21;
             this.button_history.Text = "Verlauf";
             this.button_history.UseVisualStyleBackColor = false;
@@ -566,9 +569,10 @@
             this.button_ordersite.FlatAppearance.BorderSize = 0;
             this.button_ordersite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ordersite.ForeColor = System.Drawing.Color.White;
-            this.button_ordersite.Location = new System.Drawing.Point(1443, 57);
+            this.button_ordersite.Location = new System.Drawing.Point(962, 38);
+            this.button_ordersite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ordersite.Name = "button_ordersite";
-            this.button_ordersite.Size = new System.Drawing.Size(90, 42);
+            this.button_ordersite.Size = new System.Drawing.Size(60, 28);
             this.button_ordersite.TabIndex = 22;
             this.button_ordersite.Text = "Bestellen";
             this.button_ordersite.UseVisualStyleBackColor = false;
@@ -584,20 +588,18 @@
             // label_lastorder
             // 
             this.label_lastorder.AutoSize = true;
-            this.label_lastorder.Location = new System.Drawing.Point(9, 1010);
-            this.label_lastorder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_lastorder.Location = new System.Drawing.Point(6, 673);
             this.label_lastorder.Name = "label_lastorder";
-            this.label_lastorder.Size = new System.Drawing.Size(137, 20);
+            this.label_lastorder.Size = new System.Drawing.Size(91, 13);
             this.label_lastorder.TabIndex = 23;
             this.label_lastorder.Text = "Letzte Bestellung:";
             // 
             // label_lastorderinfo
             // 
             this.label_lastorderinfo.AutoSize = true;
-            this.label_lastorderinfo.Location = new System.Drawing.Point(142, 1010);
-            this.label_lastorderinfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_lastorderinfo.Location = new System.Drawing.Point(95, 673);
             this.label_lastorderinfo.Name = "label_lastorderinfo";
-            this.label_lastorderinfo.Size = new System.Drawing.Size(14, 20);
+            this.label_lastorderinfo.Size = new System.Drawing.Size(10, 13);
             this.label_lastorderinfo.TabIndex = 24;
             this.label_lastorderinfo.Text = "-";
             // 
@@ -613,10 +615,9 @@
             this.pictureBox_bottom.BackgroundImage = global::Bestelltool.Properties.Resources.loading_small;
             this.pictureBox_bottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox_bottom.Enabled = false;
-            this.pictureBox_bottom.Location = new System.Drawing.Point(1571, 997);
-            this.pictureBox_bottom.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox_bottom.Location = new System.Drawing.Point(1047, 665);
             this.pictureBox_bottom.Name = "pictureBox_bottom";
-            this.pictureBox_bottom.Size = new System.Drawing.Size(46, 38);
+            this.pictureBox_bottom.Size = new System.Drawing.Size(31, 25);
             this.pictureBox_bottom.TabIndex = 25;
             this.pictureBox_bottom.TabStop = false;
             this.pictureBox_bottom.Visible = false;
@@ -631,10 +632,10 @@
             this.dateiToolStripMenuItem,
             this.extrastoolStripMenuItem,
             this.infoStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 49);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 33);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1617, 50);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1078, 33);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -647,13 +648,13 @@
             this.dateiToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.dateiToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(101)))), ((int)(((byte)(164)))));
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(74, 44);
+            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(53, 29);
             this.dateiToolStripMenuItem.Text = "Datei";
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(179, 34);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
@@ -661,27 +662,51 @@
             // 
             this.extrastoolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.warenlistenpfadÄndernToolStripMenuItem,
-            this.bestelllistenpfadÄndernToolStripMenuItem});
+            this.bestelllistenpfadÄndernToolStripMenuItem,
+            this.languageToolStripMenuItem});
             this.extrastoolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.extrastoolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.extrastoolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(101)))), ((int)(((byte)(164)))));
             this.extrastoolStripMenuItem.Name = "extrastoolStripMenuItem";
-            this.extrastoolStripMenuItem.Size = new System.Drawing.Size(80, 44);
+            this.extrastoolStripMenuItem.Size = new System.Drawing.Size(57, 29);
             this.extrastoolStripMenuItem.Text = "Extras";
             // 
             // warenlistenpfadÄndernToolStripMenuItem
             // 
             this.warenlistenpfadÄndernToolStripMenuItem.Name = "warenlistenpfadÄndernToolStripMenuItem";
-            this.warenlistenpfadÄndernToolStripMenuItem.Size = new System.Drawing.Size(320, 34);
+            this.warenlistenpfadÄndernToolStripMenuItem.Size = new System.Drawing.Size(223, 24);
             this.warenlistenpfadÄndernToolStripMenuItem.Text = "Warenlistenpfad ändern";
             this.warenlistenpfadÄndernToolStripMenuItem.Click += new System.EventHandler(this.warenlistenpfadÄndernToolStripMenuItem_Click);
             // 
             // bestelllistenpfadÄndernToolStripMenuItem
             // 
             this.bestelllistenpfadÄndernToolStripMenuItem.Name = "bestelllistenpfadÄndernToolStripMenuItem";
-            this.bestelllistenpfadÄndernToolStripMenuItem.Size = new System.Drawing.Size(320, 34);
+            this.bestelllistenpfadÄndernToolStripMenuItem.Size = new System.Drawing.Size(223, 24);
             this.bestelllistenpfadÄndernToolStripMenuItem.Text = "Bestelllistenpfad ändern";
             this.bestelllistenpfadÄndernToolStripMenuItem.Click += new System.EventHandler(this.bestelllistenpfadÄndernToolStripMenuItem_Click);
+            // 
+            // languageToolStripMenuItem
+            // 
+            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.germanToolStripMenuItem,
+            this.englishToolStripMenuItem});
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            this.languageToolStripMenuItem.Size = new System.Drawing.Size(223, 24);
+            this.languageToolStripMenuItem.Text = "Sprache";
+            // 
+            // germanToolStripMenuItem
+            // 
+            this.germanToolStripMenuItem.Name = "germanToolStripMenuItem";
+            this.germanToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.germanToolStripMenuItem.Text = "German";
+            this.germanToolStripMenuItem.Click += new System.EventHandler(this.GermanToolStripMenuItem_Click);
+            // 
+            // englishToolStripMenuItem
+            // 
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.englishToolStripMenuItem.Text = "English";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.EnglishToolStripMenuItem_Click);
             // 
             // infoStripMenuItem
             // 
@@ -689,17 +714,17 @@
             this.infoStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.infoStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(101)))), ((int)(((byte)(164)))));
             this.infoStripMenuItem.Name = "infoStripMenuItem";
-            this.infoStripMenuItem.Size = new System.Drawing.Size(62, 44);
+            this.infoStripMenuItem.Size = new System.Drawing.Size(45, 29);
             this.infoStripMenuItem.Text = "Info";
             this.infoStripMenuItem.ToolTipText = "Info";
             this.infoStripMenuItem.Click += new System.EventHandler(this.InfoStripMenuItem_Click);
             // 
             // UI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.ClientSize = new System.Drawing.Size(1617, 1039);
+            this.ClientSize = new System.Drawing.Size(1077, 695);
             this.Controls.Add(this.button_ordersite);
             this.Controls.Add(this.button_history);
             this.Controls.Add(this.pictureBox_bottom);
@@ -710,6 +735,7 @@
             this.Controls.Add(this.groupBox_right);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "UI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -792,6 +818,9 @@
         private System.Windows.Forms.ToolStripMenuItem warenlistenpfadÄndernToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bestelllistenpfadÄndernToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem germanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
     }
 }
 

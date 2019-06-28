@@ -1,10 +1,12 @@
 ﻿using Bestelltool.Classes;
 using Bestelltool.Enums;
 using Bestelltool.Interfaces;
+using Bestelltool.Language;
 using Bestelltool.Properties;
 using Bestelltool.Structs;
 using Microsoft.VisualBasic;
 using System;
+using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
@@ -23,7 +25,7 @@ namespace Bestelltool
         private Orders _watcher;
         private DateTime _lasthistoryupdate;
         private DateTime _lastproductupdate;
-
+        private Lang _lang;
         #region Zur Bewegung des Fensters
 
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
@@ -44,16 +46,57 @@ namespace Bestelltool
             label_user.Text = DomainAuthentification.FullUsername;
             listView_warenkorb.FullRowSelect = true;
             _login = c;
+            _lang = new Lang();
+            Lang.LanguageChanged += LanguageChanged;
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
         }
 
+        private void LanguageChanged(object sender, EventArgs e)
+        {
+            UpdateLangUI();
+        }
+
+        private void UpdateLangUI()
+        {
+            label_welcome.Text = Lang.GetText("control_form1_label_welcome");
+            dateiToolStripMenuItem.Text = Lang.GetText("control_form1_dateiToolStripMenuItem");
+            beendenToolStripMenuItem.Text = Lang.GetText("control_form1_beendenToolStripMenuItem");
+            extrastoolStripMenuItem.Text = Lang.GetText("control_form1_extrastoolStripMenuItem");
+            warenlistenpfadÄndernToolStripMenuItem.Text = Lang.GetText("control_form1_warenlistenpfadÄndernToolStripMenuItem");
+            bestelllistenpfadÄndernToolStripMenuItem.Text = Lang.GetText("control_form1_bestelllistenpfadÄndernToolStripMenuItem");
+            infoStripMenuItem.Text = Lang.GetText("control_form1_infoStripMenuItem");
+            button_ordersite.Text = Lang.GetText("control_form1_button_ordersite");
+            button_history.Text = Lang.GetText("control_form1_button_history");
+            groupBox_left.Text = Lang.GetText("control_form1_groupBox_left");
+            groupBox_right.Text = Lang.GetText("control_form1_groupBox_right");
+            label_searchfor.Text = Lang.GetText("control_form1_label_searchfor");
+            label_lastorder.Text = Lang.GetText("control_form1_label_lastorder");
+            label_target.Text = Lang.GetText("control_form1_label_target");
+            radioButton_defaultmail.Text = Lang.GetText("control_form1_radioButton_defaultmail");
+            button_order.Text = Lang.GetText("control_form1_button_order");
+        }
+
         private void UI_Load(object sender, EventArgs e)
         {
+            UpdateLangUI();
             _w = new Cart();
             _c = new CompletedOrders();
+            switch (Lang.LanguageID)
+            {
+                case LangID.German:
+                    germanToolStripMenuItem.Checked = true;
+                    break;
+
+                case LangID.English:
+                    englishToolStripMenuItem.Checked = true;
+                    break;
+
+                default:
+                    break;
+            }
             button_ordersite.ForeColor = Color.FromArgb(43, 87, 154);
             button_ordersite.BackColor = Color.FromArgb(243, 243, 243);
             LoadProducts();
@@ -67,6 +110,7 @@ namespace Bestelltool
             label_lastorderinfo.Text = _watcher.LastOrder;
             _lasthistoryupdate = DateTime.Now;
             _lastproductupdate = DateTime.Now;
+
         }
 
         private void button_refresh_Click(object sender, EventArgs e)
@@ -357,7 +401,7 @@ namespace Bestelltool
         {
             if ((_lasthistoryupdate - DateTime.Now).Seconds < -1)
             {
-                //Bei änderung wird das Event öfters ausgelöst damit aber nur einmal das Label aktualisiert wird muss 1 Sekunde vergangen sein
+                //on change this events triggers twice for some reason, to avoid this wait it will wait some time
                 Task.Delay(300).Wait();
                 _lasthistoryupdate = DateTime.Now;
                 using (var _watcher = new Orders())
@@ -419,6 +463,20 @@ namespace Bestelltool
         {
             About a = new About();
             a.ShowDialog();
+        }
+
+        private void GermanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _lang.ChangeLanguage(LangID.German);
+            germanToolStripMenuItem.Checked = true;
+            englishToolStripMenuItem.Checked = false;
+        }
+
+        private void EnglishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _lang.ChangeLanguage(LangID.English);
+            englishToolStripMenuItem.Checked = true;
+            germanToolStripMenuItem.Checked = false;
         }
     }
 

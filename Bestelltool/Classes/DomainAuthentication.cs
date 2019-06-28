@@ -1,4 +1,5 @@
 ﻿using Bestelltool.Classes;
+using Bestelltool.Language;
 using System;
 using System.DirectoryServices.AccountManagement;
 using System.Threading;
@@ -69,11 +70,11 @@ namespace Bestelltool
             FullUsername = user.Name;
             using (var group = GroupPrincipal.FindByIdentity(ctx, _group))
             {
-                if (user.IsMemberOf(group ?? throw new ArgumentException(Language.Language.GetText("error_authentification_groupnotexists"))))
+                if (user.IsMemberOf(group ?? throw new ArgumentException(Lang.GetText("error_authentification_groupnotexists"))))
                 {
                     return true;
                 }
-                throw new ArgumentException(Language.Language.GetText("error_authentification_usernotingroup"));                              //Wenn Nutzer nicht in der Gruppe gefunden wurde
+                throw new ArgumentException(Lang.GetText("error_authentification_usernotingroup"));                              //Wenn Nutzer nicht in der Gruppe gefunden wurde
             }
         }
 
@@ -91,7 +92,7 @@ namespace Bestelltool
             {
                 return;
             }
-            MessageBox.Show(Language.Language.GetText("message_authentification_nomailpassword"));
+            MessageBox.Show(Lang.GetText("message_authentification_nomailpassword"));
             InsertMailPassword m = new InsertMailPassword(credentials)
             {
                 Visible = true,

@@ -1,4 +1,5 @@
 ﻿using Bestelltool.Classes;
+using Bestelltool.Language;
 using Bestelltool.Properties;
 using System;
 using System.Threading.Tasks;
@@ -81,25 +82,34 @@ namespace Bestelltool
             else
             {
                 InputScreen();
-                MessageBox.Show(Language.Language.GetText("message_authentification_wrongcredentials"));
+                MessageBox.Show(Lang.GetText("message_authentification_wrongcredentials"));
             }
+            UI uu = new UI(cred);
+            uu.ShowDialog();
+            Close();
         }
 
         private void Authentification_Load(object sender, EventArgs e)
         {
             Configuration c = new Configuration();
             c.SetStandartPaths();
-            Language.Language.Initialize(c.GetLanguage());
+            Lang lang = new Lang();
+            Lang.LanguageChanged += UpdateLangUI;
+            LoadTranslation();
+        }
+
+        private void UpdateLangUI(object sender, EventArgs e)
+        {
             LoadTranslation();
         }
 
         private void LoadTranslation()
         {
-            label_loading.Text = Language.Language.GetText("control_authentification_label_loading");
-            label_password.Text = Language.Language.GetText("control_authentification_label_password");
-            label_username.Text = Language.Language.GetText("control_authentification_label_username");
-            label_title.Text = Language.Language.GetText("control_authentification_label_title");
-            button_enter.Text = Language.Language.GetText("control_authentification_button_enter");
+            label_loading.Text = Lang.GetText("control_authentification_label_loading");
+            label_password.Text = Lang.GetText("control_authentification_label_password");
+            label_username.Text = Lang.GetText("control_authentification_label_username");
+            label_title.Text = Lang.GetText("control_authentification_label_title");
+            button_enter.Text = Lang.GetText("control_authentification_button_enter");
         }
 
         private void Authentification_KeyDown(object sender, KeyEventArgs e)
