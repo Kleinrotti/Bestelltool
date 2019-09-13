@@ -43,8 +43,7 @@ namespace Bestelltool
             {
                 using (var p = new PrincipalContext(ContextType.Domain, credentials.Domain))
                 {
-                    if (!p.ValidateCredentials(credentials.Username, SecureStringHandler.SecureStringToString(credentials.Password),
-                        ContextOptions.Sealing | ContextOptions.SecureSocketLayer))                 //Wenn Benutzerdaten falsch sind
+                    if (!p.ValidateCredentials(credentials.Username, SecureStringHandler.SecureStringToString(credentials.Password)))                 //Wenn Benutzerdaten falsch sind
                     {
                         Valid = false;
                         return;

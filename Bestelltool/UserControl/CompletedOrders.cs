@@ -5,7 +5,6 @@ using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
 using System;
 using System.Data;
-using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +14,7 @@ namespace Bestelltool
     {
         private readonly DataTable _dt;
         private Orders _b;
+        private DataTableCache _memorycache;
 
         public CompletedOrders()
         {
@@ -39,11 +39,26 @@ namespace Bestelltool
             dataGridView1.Columns[4].Width = 50;
             dataGridView1.Columns[5].Width = 140;
             progressBar_loaded.Visible = false;
+            this.dataGridView1.CellValueNeeded += new
+            DataGridViewCellValueEventHandler(dataGridView1_CellValueNeeded);
+        }
+
+        private void dataGridView1_CellValueNeeded(object sender,
+        DataGridViewCellValueEventArgs e)
+        {
+            e.Value = _memorycache.RetrieveElement(e.RowIndex, e.ColumnIndex);
         }
 
         private void CompletedOrders_Load(object sender, EventArgs e)
         {
-            UpdateList();
+            //UpdateList();
+            dataGridView1.VirtualMode = true;
+            //_memorycache = new DataTableCache(sql, 16);
+            //foreach (DataColumn column in sql.Columns)
+            //{
+            //    dataGridView1.Columns.Add(column.ColumnName, column.ColumnName);
+            //}
+            //dataGridView1.RowCount = sql.RowCount;
         }
 
         private async void UpdateList()

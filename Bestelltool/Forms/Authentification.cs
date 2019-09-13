@@ -2,6 +2,7 @@
 using Bestelltool.Language;
 using Bestelltool.Properties;
 using System;
+using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -51,6 +52,8 @@ namespace Bestelltool
             label_title.Visible = true;
             label_loading.Visible = false;
             button_enter.Visible = true;
+            textBox_username.Text = Environment.UserName;
+            this.SelectNextControl(textBox_username, true, false, false, false);
         }
 
         private async void button_enter_Click(object sender, EventArgs e)
@@ -74,6 +77,9 @@ namespace Bestelltool
             if (d.Valid)
             {
                 await d.PasswordInRegistry(cred);
+                SqlOperations sql = new SqlOperations(new SqlConnectionStringBuilder()
+            { DataSource = "127.0.0.1\\BESTELLSOFTWARE", IntegratedSecurity = true, InitialCatalog = "bestellsoftware" }.ToString());
+            MessageBox.Show(sql.Authenticate.ToString());
                 Hide();
                 UI u = new UI(cred);
                 u.ShowDialog();
@@ -84,9 +90,6 @@ namespace Bestelltool
                 InputScreen();
                 MessageBox.Show(Lang.GetText("message_authentification_wrongcredentials"));
             }
-            UI uu = new UI(cred);
-            uu.ShowDialog();
-            Close();
         }
 
         private void Authentification_Load(object sender, EventArgs e)
@@ -96,6 +99,7 @@ namespace Bestelltool
             Lang lang = new Lang();
             Lang.LanguageChanged += UpdateLangUI;
             LoadTranslation();
+            InputScreen();
         }
 
         private void UpdateLangUI(object sender, EventArgs e)

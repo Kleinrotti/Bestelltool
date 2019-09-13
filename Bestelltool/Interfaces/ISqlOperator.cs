@@ -1,22 +1,14 @@
-﻿using System;
-using MySql.Data.MySqlClient;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Threading.Tasks;
 
 namespace Bestelltool.Interfaces
 {
     internal interface ISqlOperator
     {
-        event EventHandler<MySqlInfoMessageEventArgs> SqlInfoHandler;
-
-        event EventHandler<MySqlRowUpdatedEventArgs> SqlRowUpdateHandler;
-
-        Task Connect();
-
-        void Disconnect();
-
-        Task<string> GetSingleItem(string query);
-
-        Task<DataSet> GetCompleteTable(string tablename);
+        bool Authenticate{get;}
+        Task<List<object>> ExecuteQuery(string query);
     }
 }

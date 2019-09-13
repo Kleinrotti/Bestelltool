@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bestelltool", "Bestelltool\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bestelltool.Language", "Bestelltool.Language\Bestelltool.Language.csproj", "{D5AEFEFE-63D9-4997-99A3-D0EA3DFD5C36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bestelltool.Ticket", "Bestelltool.Ticket\Bestelltool.Ticket.csproj", "{47C8D12E-2CC9-4647-880F-0462AFB32A98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D5AEFEFE-63D9-4997-99A3-D0EA3DFD5C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5AEFEFE-63D9-4997-99A3-D0EA3DFD5C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5AEFEFE-63D9-4997-99A3-D0EA3DFD5C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C8D12E-2CC9-4647-880F-0462AFB32A98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C8D12E-2CC9-4647-880F-0462AFB32A98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C8D12E-2CC9-4647-880F-0462AFB32A98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C8D12E-2CC9-4647-880F-0462AFB32A98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

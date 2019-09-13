@@ -6,7 +6,6 @@ using Bestelltool.Properties;
 using Bestelltool.Structs;
 using Microsoft.VisualBasic;
 using System;
-using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
@@ -26,6 +25,7 @@ namespace Bestelltool
         private DateTime _lasthistoryupdate;
         private DateTime _lastproductupdate;
         private Lang _lang;
+
         #region Zur Bewegung des Fensters
 
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
@@ -111,7 +111,6 @@ namespace Bestelltool
             label_lastorderinfo.Text = _watcher.LastOrder;
             _lasthistoryupdate = DateTime.Now;
             _lastproductupdate = DateTime.Now;
-
         }
 
         private void button_refresh_Click(object sender, EventArgs e)

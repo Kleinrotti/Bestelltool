@@ -10,6 +10,9 @@
 *.userosscache
 *.sln.docstates
 
+# custom
+sql_config.json
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

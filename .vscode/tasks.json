@@ -1,0 +1,18 @@
+{
+     "version": "2.0.0",
+     "tasks": [
+       {
+         "label": "build",
+         "type": "process",
+         "windows": {
+           "command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\msbuild.exe",
+           "args": [
+             "-p:Configuration=Debug;DebugType=portable;PlatformTarget=x64",
+             "Bestelltool.sln"
+           ]
+         },
+         "options": { "cwd": "${workspaceFolder}/" },
+         "group": "build"
+       }
+     ]
+   }
