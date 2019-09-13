@@ -113,7 +113,9 @@
     <Compile Include="Enums\LogType.cs" />
     <Compile Include="Interfaces\ICart.cs" />
     <Compile Include="Interfaces\IDataPageRetriever.cs" />
+    <Compile Include="Interfaces\ILog.cs" />
     <Compile Include="Interfaces\ISqlOperator.cs" />
+    <Compile Include="Structs\LogEntry.cs" />
     <Compile Include="Structs\MailStructure.cs" />
     <Compile Include="Structs\Order.cs" />
     <Compile Include="Classes\Objects\Credentials.cs" />

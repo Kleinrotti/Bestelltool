@@ -1,5 +1,5 @@
 namespace Bestelltool{
-     enum LogType{
+     public enum LogType{
           Error,
           Warning,
           Info
