@@ -107,8 +107,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DataTableCache.cs" />
+    <Compile Include="Classes\Log.cs" />
     <Compile Include="Classes\SecureStringHandler.cs" />
     <Compile Include="Classes\SqlOperations.cs" />
+    <Compile Include="Enums\LogType.cs" />
     <Compile Include="Interfaces\ICart.cs" />
     <Compile Include="Interfaces\IDataPageRetriever.cs" />
     <Compile Include="Interfaces\ISqlOperator.cs" />
