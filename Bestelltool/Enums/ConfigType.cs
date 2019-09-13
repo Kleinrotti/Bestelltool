@@ -1,8 +1,8 @@
 ﻿namespace Bestelltool.Enums
 {
-     internal enum ConfigType
-     {
-          Bestellblattpfad,
-          Warenlistenpfad,
-     }
+    internal enum ConfigType
+    {
+        Bestellblattpfad,
+        Warenlistenpfad,
+    }
 }
