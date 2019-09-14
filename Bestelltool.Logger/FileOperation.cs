@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Bestelltool.Classes
+namespace Bestelltool.Logger
 {
-    internal class FileOperation
+    public class FileOperation
     {
         /// <summary>
         /// Contains readed Lines from file
@@ -32,7 +32,24 @@ namespace Bestelltool.Classes
         }
 
         /// <summary>
-        /// Write a string to a file
+        /// Reading a file and storing content in the reference
+        /// </summary>
+        /// <param name="content"></param>
+        /// <param name="path"></param>
+        protected virtual void ReadFile(ref string content, string path)
+        {
+            using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            {
+                WaitFileReady(path);
+                using(StreamReader r = new StreamReader(fs))
+                {
+                    content = r.ReadToEnd();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Write a string asynchronous to a file followed by a new line
         /// </summary>
         /// <param name="path"></param>
         /// <param name="context"></param>

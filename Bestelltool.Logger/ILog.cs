@@ -1,19 +1,18 @@
-﻿using Bestelltool.Structs;
+﻿using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 
-namespace Bestelltool.Interfaces
+namespace Bestelltool.Logger
 {
     public interface ILog
     {
-        string Destination { get; set; }
-        bool InsertTime { get; set; }
-
         void Error(string message);
 
         void Info(string message);
 
         void Warning(string message);
 
-        List<LogEntry> GetLog(string file);
+        JObject GetCurrentLogConfig { get; }
+
+        List<LogEntry> GetLog();
     }
 }

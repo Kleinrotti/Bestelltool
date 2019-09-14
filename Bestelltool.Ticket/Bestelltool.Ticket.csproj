@@ -52,5 +52,15 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bestelltool.Language\Bestelltool.Language.csproj">
+      <Project>{d5aefefe-63d9-4997-99a3-d0ea3dfd5c36}</Project>
+      <Name>Bestelltool.Language</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bestelltool.Logger\Bestelltool.Logger.csproj">
+      <Project>{9ee8a66b-35aa-4b1f-9380-bb0a7cd1120e}</Project>
+      <Name>Bestelltool.Logger</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

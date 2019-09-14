@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Bestelltool.Structs
+namespace Bestelltool.Logger
 {
     public struct LogEntry
     {
