@@ -26,24 +26,40 @@ namespace Bestelltool.Logger
             InsertTime = insertTime;
         }
 
+        /// <summary>
+        /// Writing an error message
+        /// </summary>
+        /// <param name="message"></param>
         public virtual void Error(string message)
         {
             var v = DateTime.Now.ToString() + Seperator + LogType.Error.ToString() + Seperator + message;
             _ = WriteFile(Destination, v);
         }
 
+        /// <summary>
+        /// Writing an info message
+        /// </summary>
+        /// <param name="message"></param>
         public virtual void Info(string message)
         {
             var v = DateTime.Now.ToString() + Seperator + LogType.Info.ToString() + Seperator + message;
             _ = WriteFile(Destination, v);
         }
 
+        /// <summary>
+        /// Writing a warning message
+        /// </summary>
+        /// <param name="message"></param>
         public virtual void Warning(string message)
         {
             var v = DateTime.Now.ToString() + Seperator + LogType.Warning.ToString() + Seperator + message;
             _ = WriteFile(Destination, v);
         }
 
+        /// <summary>
+        /// Get the complete log
+        /// </summary>
+        /// <returns></returns>
         public virtual List<LogEntry> GetLog()
         {
             var logEntries = new List<LogEntry>();
