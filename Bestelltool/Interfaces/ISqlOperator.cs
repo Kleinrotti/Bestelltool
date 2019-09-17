@@ -8,5 +8,6 @@ namespace Bestelltool.Interfaces
         bool Authenticate { get; }
 
         Task<List<object>> ExecuteQuery(string query);
+        Task<bool> ExecuteInsert(string query);
     }
 }
