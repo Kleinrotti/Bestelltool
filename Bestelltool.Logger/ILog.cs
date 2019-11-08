@@ -1,5 +1,5 @@
-﻿using System;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 
 namespace Bestelltool.Logger
@@ -14,6 +14,6 @@ namespace Bestelltool.Logger
 
         JObject GetCurrentLogConfig { get; }
 
-        List<LogEntry> GetLog();
+        List<LogEntry> Logs { get; }
     }
 }

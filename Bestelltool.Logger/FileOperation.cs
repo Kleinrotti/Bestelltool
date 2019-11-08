@@ -41,7 +41,7 @@ namespace Bestelltool.Logger
             using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
                 WaitFileReady(path);
-                using(StreamReader r = new StreamReader(fs))
+                using (StreamReader r = new StreamReader(fs))
                 {
                     content = r.ReadToEnd();
                 }

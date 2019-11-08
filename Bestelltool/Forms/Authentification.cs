@@ -78,7 +78,7 @@ namespace Bestelltool
             {
                 await d.PasswordInRegistry(cred);
                 SqlOperations sql = new SqlOperations(new SqlConnectionStringBuilder()
-                { DataSource = "IBB-EDV-GLEIS\\BESTELLSOFTWARE", IntegratedSecurity = true, InitialCatalog = "bestellsoftware" }.ToString());
+                { DataSource = "127.0.0.1\\BESTELLSOFTWARE", IntegratedSecurity = true, InitialCatalog = "bestellsoftware" }.ToString());
                 MessageBox.Show(sql.Authenticate.ToString());
                 Hide();
                 UI u = new UI(cred);

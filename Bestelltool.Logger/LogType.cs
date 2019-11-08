@@ -1,7 +1,9 @@
-namespace Bestelltool{
-     public enum LogType{
-          Error,
-          Warning,
-          Info
-     }
+namespace Bestelltool
+{
+    public enum LogType
+    {
+        Error,
+        Warning,
+        Info
+    }
 }

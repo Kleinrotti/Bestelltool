@@ -72,8 +72,8 @@ namespace Bestelltool
             {
                 Parallel.ForEach(_b.Bestellblatt, (v) =>
                 {
-                  Invoke(new MethodInvoker(() => AddToDataTable(v)));
-              });
+                    Invoke(new MethodInvoker(() => AddToDataTable(v)));
+                });
             });
             progressBar_loaded.Visible = false;
         }

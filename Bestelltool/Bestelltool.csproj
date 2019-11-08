@@ -39,7 +39,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>7.1</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -51,7 +51,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>7.1</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>
@@ -73,7 +73,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
-    <LangVersion>7.1</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
@@ -83,7 +83,7 @@
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
-    <LangVersion>7.1</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
@@ -126,12 +126,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\OrderProcessor.cs" />
+    <Compile Include="Forms\Changelog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Classes\DataTableCache.cs" />
     <Compile Include="Classes\SecureStringHandler.cs" />
     <Compile Include="Classes\SqlOperations.cs" />
     <Compile Include="Enums\LogType.cs" />
     <Compile Include="Interfaces\ICart.cs" />
     <Compile Include="Interfaces\IDataPageRetriever.cs" />
+    <Compile Include="Interfaces\IQueue.cs" />
     <Compile Include="Interfaces\ISqlOperator.cs" />
     <Compile Include="Structs\MailStructure.cs" />
     <Compile Include="Structs\Order.cs" />
@@ -189,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Changelog.resx">
+      <DependentUpon>Changelog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\CompletedOrders.resx">
       <DependentUpon>CompletedOrders.cs</DependentUpon>
